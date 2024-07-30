@@ -1,3 +1,5 @@
+import Heading1 from '@/components/fixtures/headings/Heading1';
+
 export default function FixturesPage() {
 	return (
 		<div>
@@ -6,7 +8,7 @@ export default function FixturesPage() {
 			</header>
 			<main>
 				<section>
-					<h2>Section 1</h2>
+					<Heading1 heading={'Heading 1'} />
 				</section>
 			</main>
 		</div>
