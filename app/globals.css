@@ -15,7 +15,27 @@
 	--card-border-rgb: 131, 134, 135;
 
 	--clr-black: 0, 0%;
+
+	--black: hsl(0, 0%, 0%);
+	--white: hsl(0, 0%, 100%);
+	--red: hsl(0, 100%, 50%);
+	--orange: hsl(39, 100%, 50%);
+	--yellow: hsl(60, 100%, 50%);
+	--green: hsl(120, 100%, 25%);
+	--blue: hsl(240, 100%, 50%);
+	--indigo: hsl(275, 100%, 25%);
+	--purple: hsl(300, 76%, 72%);
+
 	--light-10: 10%;
+	--light-20: 20%;
+	--light-30: 30%;
+	--light-40: 40%;
+	--light-50: 50%;
+	--light-60: 60%;
+	--light-70: 70%;
+	--light-80: 80%;
+	--light-90: 90%;
+	--light-100: 100%;
 
 	--clr-heading: hsl(var(--clr-black), var(--light-10));
 
