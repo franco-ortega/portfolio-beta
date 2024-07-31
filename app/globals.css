@@ -14,7 +14,10 @@
 	--card-rgb: 180, 185, 188;
 	--card-border-rgb: 131, 134, 135;
 
-	--clr-heading: hsl(0, 0%, 10%);
+	--clr-black: 0, 0%;
+	--light-10: 10%;
+
+	--clr-heading: hsl(var(--clr-black), var(--light-10));
 
 	--arial: Arial, Helvetica, sans-serif;
 	--courier: 'Courier New', Courier, monospace;
@@ -31,7 +34,10 @@
 	--impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	--verdana: Verdana, Geneva, Tahoma, sans-serif;
 
-	--fnt-heading: var(--arial);
+	--fnt-primary: var(--arial);
+	--fnt-secondary: var(--gill);
+
+	--fnt-heading: var(--fnt-primary);
 }
 
 @media (prefers-color-scheme: dark) {
