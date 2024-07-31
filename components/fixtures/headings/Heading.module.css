@@ -1,0 +1,4 @@
+.Heading {
+	color: var(--clr-heading);
+	font-family: var(--fnt-heading);
+}
