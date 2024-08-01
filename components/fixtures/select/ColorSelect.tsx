@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import styles from './ColorSelect.module.css';
 
 type Props = {
 	handler: Dispatch<SetStateAction<string>>;
@@ -24,8 +25,8 @@ export default function ColorSelect({ handler, color }: Props) {
 	}
 
 	return (
-		<label htmlFor='color-picker'>
-			Pick Color:{' '}
+		<label htmlFor='color-picker' className={styles.ColorSelect}>
+			<span>Pick Color: </span>
 			<select
 				name='select'
 				id='color-picker'
