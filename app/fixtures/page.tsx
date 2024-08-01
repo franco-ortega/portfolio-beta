@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import Heading from '@/components/fixtures/headings/Heading';
 import styles from './page.module.css';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
