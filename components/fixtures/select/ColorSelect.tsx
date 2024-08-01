@@ -13,21 +13,21 @@ export default function ColorSelect({ handler, color }: Props) {
 	}
 
 	return (
-		<>
-			<label htmlFor='color-picker'>Pick Color: </label>
+		<label htmlFor='color-picker'>
+			Pick Color:{' '}
 			<select
 				name='select'
 				id='color-picker'
 				onChange={onColorSelect}
 				value={color}
 			>
-				<option value=''></option>
+				<option value='' aria-hidden='true'></option>
 				{colors.map((color) => (
 					<option key={color} value={color}>
 						{color}
 					</option>
 				))}
 			</select>
-		</>
+		</label>
 	);
 }

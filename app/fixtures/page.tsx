@@ -18,9 +18,8 @@ export default function FixturesPage() {
 				<Heading heading={'h1'} content={'Fixtures'} />
 			</header>
 			<main className={styles.main}>
-				<div>
-					<ColorSelect handler={setColor} color={color} />
-				</div>
+				<ColorSelect handler={setColor} color={color} />
+
 				<section className={styles.section}>
 					<Heading heading={'h2'} content={'Headings'} />
 					<ul>
