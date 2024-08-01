@@ -1,39 +1,33 @@
-import Heading1 from '@/components/fixtures/headings/Heading1';
-import Heading2 from '@/components/fixtures/headings/Heading2';
-import Heading3 from '@/components/fixtures/headings/Heading3';
-import Heading4 from '@/components/fixtures/headings/Heading4';
-import Heading5 from '@/components/fixtures/headings/Heading5';
-import Heading6 from '@/components/fixtures/headings/Heading6';
+import Heading from '@/components/fixtures/headings/Heading';
 import styles from './page.module.css';
 
 export default function FixturesPage() {
 	return (
 		<div className={styles.body}>
 			<header className={styles.header}>
-				<Heading1 heading={'Fixtures'} />
+				<Heading heading={'h1'} content={'Fixtures'} />
 			</header>
 			<main className={styles.main}>
 				<section className={styles.section}>
-					<Heading2 heading={'Headings'} />
+					<Heading heading={'h2'} content={'Headings'} />
 					<ul>
 						<li>
-							{' '}
-							<Heading1 heading={'Heading 1'} />
+							<Heading heading={'h1'} content={'Heading 1'} />
 						</li>
 						<li>
-							<Heading2 heading={'Heading 2'} />
+							<Heading heading={'h2'} content={'Heading 2'} />
 						</li>
 						<li>
-							<Heading3 heading={'Heading 3'} />
+							<Heading heading={'h3'} content={'Heading 3'} />
 						</li>
 						<li>
-							<Heading4 heading={'Heading 4'} />
+							<Heading heading={'h4'} content={'Heading 4'} />
 						</li>
 						<li>
-							<Heading5 heading={'Heading 5'} />
+							<Heading heading={'h5'} content={'Heading 5'} />
 						</li>
 						<li>
-							<Heading6 heading={'Heading 6'} />
+							<Heading heading={'h6'} content={'Heading 6'} />
 						</li>
 					</ul>
 				</section>
