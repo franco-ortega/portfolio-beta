@@ -5,7 +5,18 @@ type Props = {
 	color: string;
 };
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const colors = [
+	'red',
+	'orange',
+	'yellow',
+	'green',
+	'blue',
+	'indigo',
+	'violet',
+	'black',
+	'gray',
+	'white',
+];
 
 export default function ColorSelect({ handler, color }: Props) {
 	function onColorSelect(e: React.ChangeEvent<HTMLSelectElement>) {
