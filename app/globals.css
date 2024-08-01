@@ -13,6 +13,51 @@
 	--callout-border-rgb: 172, 175, 176;
 	--card-rgb: 180, 185, 188;
 	--card-border-rgb: 131, 134, 135;
+
+	--clr-black: 0, 0%;
+
+	--black: hsl(0, 0%, 0%);
+	--white: hsl(0, 0%, 100%);
+	--red: hsl(0, 100%, 50%);
+	--orange: hsl(39, 100%, 50%);
+	--yellow: hsl(60, 100%, 50%);
+	--green: hsl(120, 100%, 25%);
+	--blue: hsl(240, 100%, 50%);
+	--indigo: hsl(275, 100%, 25%);
+	--purple: hsl(300, 76%, 72%);
+
+	--light-10: 10%;
+	--light-20: 20%;
+	--light-30: 30%;
+	--light-40: 40%;
+	--light-50: 50%;
+	--light-60: 60%;
+	--light-70: 70%;
+	--light-80: 80%;
+	--light-90: 90%;
+	--light-100: 100%;
+
+	--clr-heading: hsl(var(--clr-black), var(--light-10));
+
+	--arial: Arial, Helvetica, sans-serif;
+	--courier: 'Courier New', Courier, monospace;
+	--franklin: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	--gill: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	--lucida: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	--segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	--times: 'Times New Roman', Times, serif;
+	--trebuchet: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	--cambria: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	--georgia: Georgia, 'Times New Roman', Times, serif;
+	--impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	--verdana: Verdana, Geneva, Tahoma, sans-serif;
+
+	--fnt-primary: var(--arial);
+	--fnt-secondary: var(--gill);
+
+	--fnt-heading: var(--fnt-primary);
 }
 
 @media (prefers-color-scheme: dark) {
