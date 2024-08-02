@@ -4,6 +4,27 @@
 
 .header {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: antiquewhite;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+}
+
+.header > *:first-child {
+	width: 100%;
+	margin-inline-end: auto;
+}
+
+.header > div {
+	border-radius: 4px;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 }
 
 .main {
