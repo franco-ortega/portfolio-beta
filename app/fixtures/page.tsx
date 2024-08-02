@@ -23,11 +23,12 @@ export default function FixturesPage() {
 		<div className={styles.body}>
 			<header className={styles.header}>
 				<Heading heading={'h1'} content={'Fixtures'} />
+				<div>
+					<ColorSelect handler={setColor} color={color} />
+					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
+				</div>
 			</header>
 			<main className={styles.main}>
-				<ColorSelect handler={setColor} color={color} />
-				<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
-
 				<section className={styles.section}>
 					<Heading heading={'h2'} content={'Headings'} />
 					<ul>
