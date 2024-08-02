@@ -14,7 +14,7 @@ export default function FixturesPage() {
 	const [color, setColor] = useState('');
 	const [fontFamily, setFontFamily] = useState('');
 
-	const headingStyles = {
+	const pageStyles = {
 		'--clr-heading': color,
 		'--fnt-primary': fontFamily,
 	};
@@ -38,7 +38,7 @@ export default function FixturesPage() {
 								<Heading
 									heading={heading}
 									content={`Heading ${heading.charAt(1)}`}
-									headingStyles={headingStyles}
+									headingStyles={pageStyles}
 								/>
 							</li>
 						))}
@@ -49,13 +49,13 @@ export default function FixturesPage() {
 					<Heading heading={'h2'} content={'Content'} />
 					<ul>
 						<li>
-							<Content size={'small'} />
+							<Content size={'small'} contentStyles={pageStyles} />
 						</li>
 						<li>
-							<Content size={'medium'} />
+							<Content size={'medium'} contentStyles={pageStyles} />
 						</li>
 						<li>
-							<Content size={'large'} />
+							<Content size={'large'} contentStyles={pageStyles} />
 						</li>
 					</ul>
 				</section>
