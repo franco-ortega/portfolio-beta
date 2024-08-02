@@ -56,8 +56,6 @@
 
 	--fnt-primary: var(--arial);
 	--fnt-secondary: var(--gill);
-
-	--fnt-heading: var(--fnt-primary);
 }
 
 @media (prefers-color-scheme: dark) {
