@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { Headings } from '@/types/fixtures';
 import Heading from '@/components/fixtures/headings/Heading';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
-import styles from './page.module.css';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
 import Content from '@/components/fixtures/content/Content';
+import styles from './page.module.css';
 
 const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 
@@ -18,8 +18,6 @@ export default function FixturesPage() {
 		'--clr-heading': color,
 		'--fnt-primary': fontFamily,
 	};
-
-	console.log(color, fontFamily);
 
 	return (
 		<div className={styles.body}>
