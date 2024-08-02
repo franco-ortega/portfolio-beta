@@ -29,12 +29,8 @@ export default function FontFamilySelect({ handler, fontFamily }: Props) {
 		handler(e.target.value);
 	}
 
-	const selectStyles = {
-		'--fnt-primary': `var(--${fontFamily})`,
-	};
-
 	return (
-		<div className={styles.FontFamilySelect} style={selectStyles}>
+		<div className={styles.FontFamilySelect}>
 			<Select
 				handler={handler}
 				state={fontFamily}
