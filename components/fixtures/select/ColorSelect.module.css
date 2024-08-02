@@ -9,10 +9,10 @@
 	width: fit-content;
 }
 
-.ColorSelect > span {
+.ColorSelect span {
 	font-weight: 600;
 }
 
-.ColorSelect > select {
+.ColorSelect select {
 	border-radius: 4px;
 }

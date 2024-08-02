@@ -1,4 +1,7 @@
+'use client';
+
 import { Dispatch, SetStateAction } from 'react';
+import Select from './Select';
 import styles from './ColorSelect.module.css';
 
 type Props = {
@@ -25,21 +28,15 @@ export default function ColorSelect({ handler, color }: Props) {
 	}
 
 	return (
-		<label htmlFor='color-picker' className={styles.ColorSelect}>
-			<span>Pick Color: </span>
-			<select
-				name='select'
-				id='color-picker'
-				onChange={onColorSelect}
-				value={color}
-			>
-				<option value='' aria-hidden='true'></option>
-				{colors.map((color) => (
-					<option key={color} value={color}>
-						{color}
-					</option>
-				))}
-			</select>
-		</label>
+		<div className={styles.ColorSelect}>
+			<Select
+				handler={handler}
+				state={color}
+				options={colors}
+				name={'select'}
+				id={'color-picker'}
+				title={'Pick Color'}
+			/>
+		</div>
 	);
 }
