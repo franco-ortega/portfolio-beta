@@ -6,6 +6,7 @@ import Heading from '@/components/fixtures/headings/Heading';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import styles from './page.module.css';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
+import Content from '@/components/fixtures/content/Content';
 
 const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 
@@ -41,6 +42,21 @@ export default function FixturesPage() {
 								/>
 							</li>
 						))}
+					</ul>
+				</section>
+
+				<section className={styles.section}>
+					<Heading heading={'h2'} content={'Content'} />
+					<ul>
+						<li>
+							<Content size={'small'} />
+						</li>
+						<li>
+							<Content size={'medium'} />
+						</li>
+						<li>
+							<Content size={'large'} />
+						</li>
 					</ul>
 				</section>
 			</main>
