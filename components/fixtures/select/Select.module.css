@@ -1,0 +1,18 @@
+.Select {
+	background-color: var(--black);
+	color: var(--white);
+
+	border-radius: 4px;
+
+	padding: 0.25rem;
+	margin-inline: auto;
+	width: fit-content;
+}
+
+.Select span {
+	font-weight: 600;
+}
+
+.Select select {
+	border-radius: 4px;
+}

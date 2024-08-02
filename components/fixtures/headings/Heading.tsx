@@ -1,10 +1,9 @@
+import { Headings } from '@/types/fixtures';
 import styles from './Heading.module.css';
-
-type Heading = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 type Props = {
 	content: string;
-	heading: Heading;
+	heading: Headings;
 	headingStyles?: Record<string, string>;
 };
 

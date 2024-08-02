@@ -1,45 +1,24 @@
 'use client';
 
-import { Dispatch, SetStateAction, useState } from 'react';
+import { useState } from 'react';
+import { Headings } from '@/types/fixtures';
 import Heading from '@/components/fixtures/headings/Heading';
+import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import styles from './page.module.css';
+import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
 
-const ColorSelect = ({
-	handler,
-	color,
-}: {
-	handler: Dispatch<SetStateAction<string>>;
-	color: string;
-}) => {
-	function onColorSelect(e: React.ChangeEvent<HTMLSelectElement>) {
-		handler(e.target.value);
-	}
-
-	return (
-		<select
-			name='color-picker'
-			id='color-picker'
-			onChange={onColorSelect}
-			value={color}
-		>
-			<option value=''>Pick Color</option>
-			<option value='red'>red</option>
-			<option value='orange'>orange</option>
-			<option value='yellow'>yellow</option>
-			<option value='green'>green</option>
-			<option value='blue'>blue</option>
-			<option value='indigo'>indigo</option>
-			<option value='violet'>violet</option>
-		</select>
-	);
-};
+const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 
 export default function FixturesPage() {
 	const [color, setColor] = useState('');
+	const [fontFamily, setFontFamily] = useState('');
 
 	const headingStyles = {
 		'--clr-heading': color,
+		'--fnt-primary': fontFamily,
 	};
+
+	console.log(color, fontFamily);
 
 	return (
 		<div className={styles.body}>
@@ -47,54 +26,21 @@ export default function FixturesPage() {
 				<Heading heading={'h1'} content={'Fixtures'} />
 			</header>
 			<main className={styles.main}>
-				<div>
-					<ColorSelect handler={setColor} color={color} />
-				</div>
+				<ColorSelect handler={setColor} color={color} />
+				<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
+
 				<section className={styles.section}>
 					<Heading heading={'h2'} content={'Headings'} />
 					<ul>
-						<li>
-							<Heading
-								heading={'h1'}
-								content={'Heading 1'}
-								headingStyles={headingStyles}
-							/>
-						</li>
-						<li>
-							<Heading
-								heading={'h2'}
-								content={'Heading 2'}
-								headingStyles={headingStyles}
-							/>
-						</li>
-						<li>
-							<Heading
-								heading={'h3'}
-								content={'Heading 3'}
-								headingStyles={headingStyles}
-							/>
-						</li>
-						<li>
-							<Heading
-								heading={'h4'}
-								content={'Heading 4'}
-								headingStyles={headingStyles}
-							/>
-						</li>
-						<li>
-							<Heading
-								heading={'h5'}
-								content={'Heading 5'}
-								headingStyles={headingStyles}
-							/>
-						</li>
-						<li>
-							<Heading
-								heading={'h6'}
-								content={'Heading 6'}
-								headingStyles={headingStyles}
-							/>
-						</li>
+						{headings.map((heading) => (
+							<li key={heading}>
+								<Heading
+									heading={heading}
+									content={`Heading ${heading.charAt(1)}`}
+									headingStyles={headingStyles}
+								/>
+							</li>
+						))}
 					</ul>
 				</section>
 			</main>
