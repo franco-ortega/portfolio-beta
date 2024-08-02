@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import styles from './Select.module.css';
 
 type Props = {
 	handler: Dispatch<SetStateAction<string>>;
@@ -22,16 +23,18 @@ export default function Select({
 	}
 
 	return (
-		<label htmlFor={id}>
-			<span>{title}: </span>
-			<select name={name} id={id} onChange={onSelect} value={state}>
-				<option value='' aria-hidden='true'></option>
-				{options.map((option) => (
-					<option key={option} value={option}>
-						{option}
-					</option>
-				))}
-			</select>
-		</label>
+		<div className={styles.Select}>
+			<label htmlFor={id}>
+				<span>{title}: </span>
+				<select name={name} id={id} onChange={onSelect} value={state}>
+					<option value='' aria-hidden='true'></option>
+					{options.map((option) => (
+						<option key={option} value={option}>
+							{option}
+						</option>
+					))}
+				</select>
+			</label>
+		</div>
 	);
 }
