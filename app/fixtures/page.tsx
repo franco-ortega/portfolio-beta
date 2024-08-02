@@ -15,7 +15,7 @@ export default function FixturesPage() {
 	const [fontFamily, setFontFamily] = useState('');
 
 	const pageStyles = {
-		'--clr-heading': color,
+		'--clr-primary': color,
 		'--fnt-primary': fontFamily,
 	};
 
