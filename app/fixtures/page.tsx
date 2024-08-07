@@ -14,11 +14,17 @@ const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 export default function FixturesPage() {
 	const [color, setColor] = useState('');
 	const [fontFamily, setFontFamily] = useState('');
+	const [value, setValue] = useState('option1');
 
 	const pageStyles = {
 		'--clr-primary': color,
 		'--fnt-primary': fontFamily,
 	};
+
+	function onSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
+		console.log('selected', e.target.value);
+		setValue(e.target.value);
+	}
 
 	return (
 		<div className={styles.body}>
@@ -27,7 +33,11 @@ export default function FixturesPage() {
 				<div>
 					<ColorSelect handler={setColor} color={color} />
 					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
-					<CustomSelect>Test</CustomSelect>
+					<CustomSelect value={value} onSelectChange={onSelectChange}>
+						<option value={'option1'}>Option 1</option>
+						<option value={'option2'}>Option 2</option>
+						<option value={'option3'}>Option 3</option>
+					</CustomSelect>
 				</div>
 			</header>
 			<main className={styles.main}>
