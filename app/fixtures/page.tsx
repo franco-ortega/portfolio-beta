@@ -22,7 +22,6 @@ export default function FixturesPage() {
 	};
 
 	function onSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
-		console.log('selected', e.target.value);
 		setValue(e.target.value);
 	}
 
@@ -33,7 +32,11 @@ export default function FixturesPage() {
 				<div>
 					<ColorSelect handler={setColor} color={color} />
 					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
-					<CustomSelect value={value} onSelectChange={onSelectChange}>
+					<CustomSelect
+						id={'custom-select'}
+						value={value}
+						onSelectChange={onSelectChange}
+					>
 						<option value={'option1'}>Option 1</option>
 						<option value={'option2'}>Option 2</option>
 						<option value={'option3'}>Option 3</option>

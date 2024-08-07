@@ -1,16 +1,20 @@
 import React, { ChangeEvent, ReactElement, ReactNode, useState } from 'react';
 import styles from './CustomSelect.module.css';
 
+type OptionElement = ReactElement<{ value: string; children: ReactNode }>;
+
 type Props = {
-	children: ReactNode;
+	id: string;
 	value: string;
 	onSelectChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+	children: ReactNode;
 };
 
 export default function CustomSelect({
+	id,
 	value,
-	children,
 	onSelectChange,
+	children,
 }: Props) {
 	const displayedValue = getDisplayedValue(value, children);
 
@@ -20,7 +24,7 @@ export default function CustomSelect({
 
 	return (
 		<div className={styles.CustomSelect}>
-			<select value={value} onChange={onSelectChange}>
+			<select id={id} value={value} onChange={onSelectChange}>
 				{children}
 			</select>
 			<div>
@@ -37,7 +41,7 @@ function getDisplayedValue(value: string, children: ReactNode) {
 	const childArray = React.Children.toArray(children);
 
 	const selectedChild = childArray.find(
-		(child): child is ReactElement<any> =>
+		(child): child is OptionElement =>
 			React.isValidElement(child) && child.props.value === value
 	);
 
