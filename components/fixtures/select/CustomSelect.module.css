@@ -31,8 +31,8 @@
 	right: 10px;
 	margin: auto;
 
-	width: 24px;
-	height: 24px;
+	width: var(--size);
+	height: var(--size);
 
 	pointer-events: none;
 }

@@ -7,6 +7,10 @@ type Props = {
 export default function CustomSelect({ children }: Props) {
 	const displayedValue = 'DISPLAY';
 
+	const iconWrapperStyles: Record<string, string> = {
+		'--size': `${24 / 16}rem`,
+	};
+
 	return (
 		<div className={styles.CustomSelect}>
 			<select>
@@ -17,7 +21,7 @@ export default function CustomSelect({ children }: Props) {
 			</select>
 			<div className='presentational'>
 				{displayedValue}
-				<div>
+				<div style={iconWrapperStyles}>
 					<span> {'>'} </span>
 				</div>
 			</div>
