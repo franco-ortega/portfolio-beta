@@ -7,6 +7,7 @@ import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
+import CustomSelect from '@/components/fixtures/select/CustomSelect';
 
 const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 
@@ -26,6 +27,7 @@ export default function FixturesPage() {
 				<div>
 					<ColorSelect handler={setColor} color={color} />
 					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
+					<CustomSelect>Test</CustomSelect>
 				</div>
 			</header>
 			<main className={styles.main}>
