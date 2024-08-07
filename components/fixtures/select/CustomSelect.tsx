@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ReactNode, useState } from 'react';
+import React, { ChangeEvent, ReactElement, ReactNode, useState } from 'react';
 import styles from './CustomSelect.module.css';
 
 type Props = {
@@ -11,7 +11,6 @@ export default function CustomSelect({
 	value,
 	children,
 	onSelectChange,
-	choice,
 }: Props) {
 	const displayedValue = getDisplayedValue(value, children);
 
@@ -21,12 +20,11 @@ export default function CustomSelect({
 
 	return (
 		<div className={styles.CustomSelect}>
-			<select value={choice} onChange={onSelectChange}>
+			<select value={value} onChange={onSelectChange}>
 				{children}
 			</select>
 			<div>
 				{displayedValue}
-				{choice}
 				<div style={iconWrapperStyles}>
 					<span> {'>'} </span>
 				</div>
@@ -35,13 +33,15 @@ export default function CustomSelect({
 	);
 }
 
-function getDisplayedValue(value: any, children: any) {
+function getDisplayedValue(value: string, children: ReactNode) {
 	const childArray = React.Children.toArray(children);
-	console.log(childArray[0].props.children);
 
-	const selectedChild = childArray.find((child) => child.props.value === value);
+	const selectedChild = childArray.find(
+		(child): child is ReactElement<any> =>
+			React.isValidElement(child) && child.props.value === value
+	);
 
-	console.log(selectedChild.props);
+	if (!selectedChild) return null;
 
-	return selectedChild;
+	return selectedChild.props.children;
 }
