@@ -1,7 +1,6 @@
-import React, { ChangeEvent, ReactElement, ReactNode, useState } from 'react';
+import React, { ChangeEvent, ReactNode } from 'react';
+import { getDisplayedValue } from '@/utils/getDisplayedValue';
 import styles from './CustomSelect.module.css';
-
-type OptionElement = ReactElement<{ value: string; children: ReactNode }>;
 
 type Props = {
 	id: string;
@@ -35,17 +34,4 @@ export default function CustomSelect({
 			</div>
 		</div>
 	);
-}
-
-function getDisplayedValue(value: string, children: ReactNode) {
-	const childArray = React.Children.toArray(children);
-
-	const selectedChild = childArray.find(
-		(child): child is OptionElement =>
-			React.isValidElement(child) && child.props.value === value
-	);
-
-	if (!selectedChild) return null;
-
-	return selectedChild.props.children;
 }
