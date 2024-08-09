@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Headings } from '@/types/fixtures';
+import { Heading as HeadingItem } from '@/types/fixtures';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
 import CustomSelect from '@/components/fixtures/select/CustomSelect';
@@ -9,7 +9,7 @@ import Heading from '@/components/fixtures/headings/Heading';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
 
-const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
+const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as HeadingItem[];
 
 export default function FixturesPage() {
 	const [color, setColor] = useState('');
