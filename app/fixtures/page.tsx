@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { Headings } from '@/types/fixtures';
-import Heading from '@/components/fixtures/headings/Heading';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
+import CustomSelect from '@/components/fixtures/select/CustomSelect';
+import Heading from '@/components/fixtures/headings/Heading';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
-import CustomSelect from '@/components/fixtures/select/CustomSelect';
 
 const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
 
@@ -32,6 +32,8 @@ export default function FixturesPage() {
 				<div>
 					<ColorSelect handler={setColor} color={color} />
 					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
+				</div>
+				<div>
 					<CustomSelect
 						id={'custom-select'}
 						value={value}
