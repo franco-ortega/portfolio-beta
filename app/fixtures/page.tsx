@@ -14,7 +14,7 @@ const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as HeadingItem[];
 export default function FixturesPage() {
 	const [color, setColor] = useState('');
 	const [fontFamily, setFontFamily] = useState('');
-	const [value, setValue] = useState('option1');
+	const [value, setValue] = useState('black');
 
 	const pageStyles = {
 		'--clr-primary': color,
@@ -23,6 +23,7 @@ export default function FixturesPage() {
 
 	function onSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
 		setValue(e.target.value);
+		setColor(e.target.value);
 	}
 
 	return (
@@ -39,11 +40,10 @@ export default function FixturesPage() {
 						value={value}
 						onSelectChange={onSelectChange}
 					>
-						<option value={'option1'}>Option 1</option>
-						<option value={'option2'}>Option 2</option>
-						<option value={'option3'}>Option 3</option>
-						<option value={'option4'}>Option 4</option>
-						<option value={'option5'}>Option 5</option>
+						<option value={'black'}>Black</option>
+						<option value={'red'}>Red</option>
+						<option value={'green'}>Green</option>
+						<option value={'blue'}>Blue</option>
 					</CustomSelect>
 				</div>
 			</header>
