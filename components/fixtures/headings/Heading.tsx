@@ -1,9 +1,9 @@
-import { Headings } from '@/types/fixtures';
+import { Heading as HeadingItem } from '@/types/fixtures';
 import styles from './Heading.module.css';
 
 type Props = {
 	content: string;
-	heading: Headings;
+	heading: HeadingItem;
 	headingStyles?: Record<string, string>;
 };
 

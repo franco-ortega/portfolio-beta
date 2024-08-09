@@ -1,6 +1,7 @@
 'use client';
 
 import { Dispatch, SetStateAction } from 'react';
+import data from '../../../data/fixtures.json';
 import Select from './Select';
 import styles from './ColorSelect.module.css';
 
@@ -8,19 +9,6 @@ type Props = {
 	handler: Dispatch<SetStateAction<string>>;
 	color: string;
 };
-
-const colors = [
-	'red',
-	'orange',
-	'yellow',
-	'green',
-	'blue',
-	'indigo',
-	'violet',
-	'black',
-	'gray',
-	'white',
-];
 
 export default function ColorSelect({ handler, color }: Props) {
 	function onColorSelect(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -32,7 +20,7 @@ export default function ColorSelect({ handler, color }: Props) {
 			<Select
 				handler={handler}
 				state={color}
-				options={colors}
+				options={data.colors}
 				name={'select'}
 				id={'color-picker'}
 				title={'Pick Color'}
