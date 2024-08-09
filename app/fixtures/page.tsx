@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Heading as HeadingItem } from '@/types/fixtures';
+import data from '../../data/fixtures.json';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
 import CustomSelect from '@/components/fixtures/select/CustomSelect';
@@ -40,10 +41,11 @@ export default function FixturesPage() {
 						value={value}
 						onSelectChange={onSelectChange}
 					>
-						<option value={'black'}>Black</option>
-						<option value={'red'}>Red</option>
-						<option value={'green'}>Green</option>
-						<option value={'blue'}>Blue</option>
+						{data.colors.map((color) => (
+							<option key={color} value={color}>
+								{color}
+							</option>
+						))}
 					</CustomSelect>
 				</div>
 			</header>
