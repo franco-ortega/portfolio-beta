@@ -2,25 +2,19 @@
 	padding: 1rem;
 }
 
-.header {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+.header > *:first-child,
+.header > div {
+	margin-inline: auto;
+	width: fit-content;
+}
 
-	background-color: antiquewhite;
+.header {
+	background-color: hsl(35, 80%, 90%);
 	border-radius: 4px;
 	margin-bottom: 1rem;
 }
 
-.header > *:first-child {
-	width: 100%;
-	margin-inline-end: auto;
-}
-
 .header > div {
-	border-radius: 4px;
 	padding: 0.5rem;
 	display: flex;
 	flex-direction: row;

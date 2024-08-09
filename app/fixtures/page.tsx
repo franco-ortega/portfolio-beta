@@ -1,20 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { Headings } from '@/types/fixtures';
-import Heading from '@/components/fixtures/headings/Heading';
+import { Heading as HeadingItem } from '@/types/fixtures';
+import data from '../../data/fixtures.json';
 import ColorSelect from '@/components/fixtures/select/ColorSelect';
 import FontFamilySelect from '@/components/fixtures/select/FontFamilySelect';
+import CustomSelect from '@/components/fixtures/select/CustomSelect';
+import Heading from '@/components/fixtures/headings/Heading';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
-import CustomSelect from '@/components/fixtures/select/CustomSelect';
 
-const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as Headings[];
+const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as HeadingItem[];
 
 export default function FixturesPage() {
 	const [color, setColor] = useState('');
 	const [fontFamily, setFontFamily] = useState('');
-	const [value, setValue] = useState('option1');
+	const [value, setValue] = useState('black');
 
 	const pageStyles = {
 		'--clr-primary': color,
@@ -23,6 +24,7 @@ export default function FixturesPage() {
 
 	function onSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
 		setValue(e.target.value);
+		setColor(e.target.value);
 	}
 
 	return (
@@ -32,14 +34,18 @@ export default function FixturesPage() {
 				<div>
 					<ColorSelect handler={setColor} color={color} />
 					<FontFamilySelect handler={setFontFamily} fontFamily={fontFamily} />
+				</div>
+				<div>
 					<CustomSelect
 						id={'custom-select'}
 						value={value}
 						onSelectChange={onSelectChange}
 					>
-						<option value={'option1'}>Option 1</option>
-						<option value={'option2'}>Option 2</option>
-						<option value={'option3'}>Option 3</option>
+						{data.colors.map((color) => (
+							<option key={color} value={color}>
+								{color}
+							</option>
+						))}
 					</CustomSelect>
 				</div>
 			</header>
