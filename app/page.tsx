@@ -34,10 +34,10 @@ export default function Home() {
 				</section>
 				<section className={styles.section} id={'sectionTwo'}>
 					<Heading
-						content='Section One'
+						content='Section Two'
 						heading='h2'
 						headingStyles={{
-							color: 'var(--green)',
+							color: 'var(--red)',
 						}}
 					/>
 					<Content size={'small'} />
@@ -46,10 +46,10 @@ export default function Home() {
 				</section>
 				<section className={styles.section} id={'sectionThree'}>
 					<Heading
-						content='Section One'
+						content='Section Three'
 						heading='h2'
 						headingStyles={{
-							color: 'var(--green)',
+							color: 'var(--blue)',
 						}}
 					/>
 					<Content size={'small'} />
