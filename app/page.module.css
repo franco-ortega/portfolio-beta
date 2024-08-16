@@ -1,3 +1,19 @@
+.top {
+	background-color: black;
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+	width: fit-content;
+
+	margin-top: 1rem;
+	margin-right: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	color: white;
+}
+
 .header,
 .main {
 	padding: 1rem;
@@ -33,6 +49,8 @@
 
 	height: 750px;
 	height: 100vh;
+
+	position: relative;
 }
 
 .section + .section {
