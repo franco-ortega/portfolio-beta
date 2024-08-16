@@ -13,7 +13,7 @@ export default function Home() {
 						color: 'var(--yellow)',
 					}}
 				/>
-				<nav>
+				<nav className={styles.nav}>
 					<a href='#sectionOne'>Section One</a>
 					<a href='#sectionTwo'>Section Two</a>
 					<a href='#sectionThree'>Section Three</a>
