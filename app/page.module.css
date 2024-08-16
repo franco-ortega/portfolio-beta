@@ -1,9 +1,23 @@
+.header,
 .main {
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* justify-content: space-between; */
-	/* align-items: center; */
-	/* min-height: 100vh; */
+	padding: 1rem;
+}
+
+.header {
+	background-color: hsl(0, 60%, 60%);
+	text-align: center;
+}
+
+.section {
+	border: solid 2px var(--blue);
+	padding: 1rem;
+
+	height: 750px;
+	height: 100vh;
+}
+
+.section + .section {
+	margin-top: 1rem;
 }
 
 /* Enable hover only on non-touch devices */
