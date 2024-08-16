@@ -21,16 +21,37 @@ export default function Home() {
 			</header>
 			<main className={styles.main}>
 				<section className={styles.section} id={'sectionOne'}>
+					<Heading
+						content='Section One'
+						heading='h2'
+						headingStyles={{
+							color: 'var(--green)',
+						}}
+					/>
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
 				</section>
 				<section className={styles.section} id={'sectionTwo'}>
+					<Heading
+						content='Section One'
+						heading='h2'
+						headingStyles={{
+							color: 'var(--green)',
+						}}
+					/>
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
 				</section>
 				<section className={styles.section} id={'sectionThree'}>
+					<Heading
+						content='Section One'
+						heading='h2'
+						headingStyles={{
+							color: 'var(--green)',
+						}}
+					/>
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
