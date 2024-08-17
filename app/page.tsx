@@ -1,15 +1,7 @@
 import Heading from '@/components/fixtures/headings/Heading';
+import BackToTop from '@/components/backToTop/BackToTop';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
-import BackToTop from '@/components/backToTop/BackToTop';
-
-// function BackToTop() {
-// 	return (
-// 		<div className={styles.top}>
-// 			<a href='#top'>Back to Top</a>
-// 		</div>
-// 	);
-// }
 
 export default function Home() {
 	return (
