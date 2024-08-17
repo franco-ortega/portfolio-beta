@@ -30,7 +30,7 @@ export default function Home() {
 							color: 'var(--green)',
 						}}
 					/>
-					<BackToTop jumpLink={'top'} />
+					<BackToTop />
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
@@ -43,7 +43,7 @@ export default function Home() {
 							color: 'var(--red)',
 						}}
 					/>
-					<BackToTop jumpLink={'top'} />
+					<BackToTop />
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
@@ -56,7 +56,7 @@ export default function Home() {
 							color: 'var(--blue)',
 						}}
 					/>
-					<BackToTop jumpLink={'top'} />
+					<BackToTop />
 					<Content size={'small'} />
 					<Content size={'medium'} />
 					<Content size={'large'} />
