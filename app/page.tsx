@@ -1,8 +1,8 @@
 import Heading from '@/components/fixtures/headings/Heading';
 import BackToTop from '@/components/links/backToTop/BackToTop';
+import SectionLink from '@/components/links/sectionLink/SectionLink';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
-import SectionLink from '@/components/links/sectionLink/SectionLink';
 
 export default function Home() {
 	return (
