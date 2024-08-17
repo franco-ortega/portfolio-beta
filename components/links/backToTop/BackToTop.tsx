@@ -1,4 +1,4 @@
-import JumpLink from '../links/jumpLink/JumpLink';
+import JumpLink from '../jumpLink/JumpLink';
 import styles from './BackToTop.module.css';
 
 const JUMP_LINK = {

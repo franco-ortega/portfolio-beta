@@ -1,5 +1,5 @@
 import Heading from '@/components/fixtures/headings/Heading';
-import BackToTop from '@/components/backToTop/BackToTop';
+import BackToTop from '@/components/links/backToTop/BackToTop';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
 
