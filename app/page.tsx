@@ -2,6 +2,7 @@ import Heading from '@/components/fixtures/headings/Heading';
 import BackToTop from '@/components/links/backToTop/BackToTop';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
+import SectionLink from '@/components/links/sectionLink/SectionLink';
 
 export default function Home() {
 	return (
@@ -15,9 +16,9 @@ export default function Home() {
 					}}
 				/>
 				<nav className={styles.nav}>
-					<a href='#sectionOne'>Section One</a>
-					<a href='#sectionTwo'>Section Two</a>
-					<a href='#sectionThree'>Section Three</a>
+					<SectionLink link='sectionOne' linkText='Section One' />
+					<SectionLink link='sectionTwo' linkText='Section Two' />
+					<SectionLink link='sectionThree' linkText='Section Three' />
 				</nav>
 			</header>
 			<main className={styles.main}>

@@ -11,7 +11,6 @@
 .nav {
 	background-color: hsl(0, 60%, 40%);
 	border-radius: 8px;
-	width: fit-content;
 	margin-inline: auto;
 	padding: 0.5rem 1rem;
 
@@ -21,10 +20,6 @@
 
 .nav > *:hover {
 	color: hsl(80, 60%, 85%);
-}
-
-.nav > * + * {
-	margin-left: 1rem;
 }
 
 .section {
