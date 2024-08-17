@@ -1,9 +1,13 @@
 import styles from './BackToTop.module.css';
 
-export default function BackToTop() {
+type Props = {
+	jumpLink: string;
+};
+
+export default function BackToTop({ jumpLink }: Props) {
 	return (
 		<div className={styles.BackToTop}>
-			<a href='#top'>Back to Top</a>
+			<a href={`#${jumpLink}`}>Back to Top</a>
 		</div>
 	);
 }
