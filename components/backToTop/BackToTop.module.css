@@ -1,0 +1,15 @@
+.BackToTop {
+	background-color: var(--black);
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+	width: fit-content;
+
+	margin-top: 1rem;
+	margin-right: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	color: var(--white);
+}
