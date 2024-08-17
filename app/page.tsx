@@ -12,7 +12,7 @@ function BackToTop() {
 
 export default function Home() {
 	return (
-		<>
+		<div className={styles.page}>
 			<header className={styles.header} id={'top'}>
 				<Heading
 					content='Hello'
@@ -68,6 +68,6 @@ export default function Home() {
 					<Content size={'large'} />
 				</section>
 			</main>
-		</>
+		</div>
 	);
 }
