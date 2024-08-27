@@ -1,32 +1,15 @@
 import Heading from '@/components/fixtures/headings/Heading';
+import BackToTop from '@/components/links/backToTop/BackToTop';
+import SectionLink from '@/components/links/sectionLink/SectionLink';
 import Content from '@/components/fixtures/content/Content';
 import styles from './page.module.css';
-
-function BackToTop() {
-	return (
-		<div className={styles.top}>
-			<a href='#top'>Back to Top</a>
-		</div>
-	);
-}
+import Header from '@/components/header/Header';
 
 export default function Home() {
 	return (
 		<div className={styles.page}>
-			<header className={styles.header} id={'top'}>
-				<Heading
-					content='Hello'
-					heading='h1'
-					headingStyles={{
-						color: 'var(--yellow)',
-					}}
-				/>
-				<nav className={styles.nav}>
-					<a href='#sectionOne'>Section One</a>
-					<a href='#sectionTwo'>Section Two</a>
-					<a href='#sectionThree'>Section Three</a>
-				</nav>
-			</header>
+			<Header id={'top'} />
+
 			<main className={styles.main}>
 				<section className={styles.section} id={'sectionOne'}>
 					<Heading
@@ -60,6 +43,19 @@ export default function Home() {
 						heading='h2'
 						headingStyles={{
 							color: 'var(--blue)',
+						}}
+					/>
+					<BackToTop />
+					<Content size={'small'} />
+					<Content size={'medium'} />
+					<Content size={'large'} />
+				</section>
+				<section className={styles.section} id={'sectionFour'}>
+					<Heading
+						content='Section Four'
+						heading='h2'
+						headingStyles={{
+							color: 'var(--orange)',
 						}}
 					/>
 					<BackToTop />
