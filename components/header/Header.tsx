@@ -1,3 +1,4 @@
+import links from '../../data/links.json';
 import Heading from '../fixtures/headings/Heading';
 import SectionLink from '../links/sectionLink/SectionLink';
 import styles from './Header.module.css';
@@ -17,9 +18,13 @@ export default function Header({ id }: Props) {
 				}}
 			/>
 			<nav className={styles.nav}>
-				<SectionLink link='sectionOne' linkText='Section One' />
-				<SectionLink link='sectionTwo' linkText='Section Two' />
-				<SectionLink link='sectionThree' linkText='Section Three' />
+				{links.sectionLinks.map((link) => (
+					<SectionLink
+						key={link.section}
+						link={link.link}
+						linkText={link.section}
+					/>
+				))}
 			</nav>
 		</header>
 	);
