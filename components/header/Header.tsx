@@ -10,7 +10,7 @@ export default function Header({ id }: Props) {
 	return (
 		<header id={id} className={styles.Header}>
 			<Heading
-				content='Hello'
+				content='Franco Ortega'
 				heading='h1'
 				headingStyles={{
 					color: 'var(--yellow)',
