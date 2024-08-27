@@ -1,0 +1,20 @@
+{
+	"sectionLinks": [
+		{
+			"section": "Section One",
+			"link": "sectionOne"
+		},
+		{
+			"section": "Section Two",
+			"link": "sectionTwo"
+		},
+		{
+			"section": "Section Three",
+			"link": "sectionThree"
+		},
+		{
+			"section": "SectionFour",
+			"link": "sectionFour"
+		}
+	]
+}
