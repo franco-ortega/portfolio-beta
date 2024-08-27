@@ -50,6 +50,19 @@ export default function Home() {
 					<Content size={'medium'} />
 					<Content size={'large'} />
 				</section>
+				<section className={styles.section} id={'sectionFour'}>
+					<Heading
+						content='Section Four'
+						heading='h2'
+						headingStyles={{
+							color: 'var(--orange)',
+						}}
+					/>
+					<BackToTop />
+					<Content size={'small'} />
+					<Content size={'medium'} />
+					<Content size={'large'} />
+				</section>
 			</main>
 		</div>
 	);
